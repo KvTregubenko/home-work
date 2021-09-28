@@ -27,8 +27,6 @@ RUN make  && make install
 
 
 RUN ./configure --sbin-path=/usr/sbin/nginx \
-#      --conf-path=/etc/nginx/nginx.conf \
-#      --pid-path=/var/run/nginx.pid \
      --prefix=/opt/nginx \
      --with-ld-opt="-Wl,-rpath,/usr/local/lib" \
      --add-module=/ngx_devel_kit-0.2.19 \
