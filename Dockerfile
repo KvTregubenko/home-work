@@ -30,8 +30,9 @@ RUN ./configure --sbin-path=/usr/sbin/nginx \
      --add-module=/ngx_devel_kit-0.2.19 \
      --add-module=/lua-nginx-module-0.9.16 && make -j2 && make install
 
-CMD ["nginx", "-g", "daemon off;"]
+
 
 EXPOSE 80
 
 
+CMD ["nginx", "-g", "daemon off;"]
