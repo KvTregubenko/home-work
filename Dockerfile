@@ -35,11 +35,3 @@ CMD ["nginx", "-g", "daemon off;"]
 EXPOSE 80
 
 
-# FROM debian:9
-#WORKDIR /usr/local/sbin/
-#COPY --from=build /usr/local/sbin/nginx
-# WORKDIR /nginx
-# COPY --from=build /nginx-1.7.9 .
-# RUN ./configure --sbin-path=/usr/sbin/nginx \
-#      --prefix=/opt/nginx \
-# CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
