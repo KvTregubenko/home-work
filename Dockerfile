@@ -22,19 +22,12 @@ RUN export LUAJIT_LIB=/usr/local/lib \
 WORKDIR /luajit2-${LUA_VER}
 RUN make  && make install
 
-
-# 
-
-
 RUN ./configure --sbin-path=/usr/sbin/nginx \
      --prefix=/opt/nginx \
      --with-ld-opt="-Wl,-rpath,/usr/local/lib" \
      --add-module=/ngx_devel_kit-0.2.19 \
      --add-module=/lua-nginx-module-0.9.16 && make -j2 && make install
 
-
-
 EXPOSE 80
-
 
 CMD ["nginx", "-g", "daemon off;"]
